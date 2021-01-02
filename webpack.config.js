@@ -53,6 +53,7 @@ module.exports  = {
         main:'./index.js'
     },
     output: {
+        publicPath: '/',
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist')
     },  
@@ -64,13 +65,20 @@ module.exports  = {
         port: 3000
     },
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: path.resolve(__dirname, 'src/assets'),
+                to: path.resolve(__dirname, 'dist/assets'), 
+            }],
+        }),
         new HTMLWebpackPlugin({
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: filename('css')
-        })
+        }),
+
     ],
     module: {
         rules: [

@@ -1,0 +1,62 @@
+.header{
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 12%, rgba(37,37,37,1) 100%);
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        display: block;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    .nav{
+        display: flex;
+
+        &__item{
+            display: flex;
+            cursor: pointer;
+            padding: 40px 20px;
+            transition: $transition;
+            border-top: 3px solid transparent;
+
+            &:hover{
+                border-top: 3px solid $white;
+            }
+            .active{
+                background-color: rgba(0, 0, 0, .2);
+            }
+
+            &--list{
+                padding: 40px 8px;
+                &:hover{
+                    .nav__item-icon{
+                        color: $white;
+                    } 
+                }
+            }
+
+            &-link, &-icon{
+                text-decoration: none;
+                transition: $transition;
+            }
+
+            &-link{
+                color: $white;
+                font-family: $YesevaOne-f;
+                
+            }
+            &-icon{
+                color: $primary;
+            }
+        }
+    }
+
+    .btn-hamburger{
+        display: none;
+    }
+}
