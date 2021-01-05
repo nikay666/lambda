@@ -1,6 +1,7 @@
-@import './styles/mixins.scss';
 @import './styles/variables.scss';
+@import './styles/mixins.scss';
 @import './styles/header.scss';
+@import './styles/mainscreen.scss';
 
 *{
     box-sizing: border-box;
@@ -12,10 +13,37 @@
     padding: 0 170px;
 }
 
+.h1{
+    font-size: 90px;
+    color: $white;
+    text-align: center;
+    line-height: 140%;
+    white-space: pre-wrap
+}
+.decoration-light{
+    width: 230px;
+}
 
-.test{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.btn{
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &--dark{
+        @include btn($dark, $white);
+        &:hover{
+            @include btn($white, $white);
+        }
+    }
+    &--light{
+        @include btn($white, $white);
+        &:hover{
+            @include btn($dark, $white);
+        }
+    }
+    &--primary{
+
+    }
 }

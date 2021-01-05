@@ -1,0 +1,24 @@
+.mainscreen{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 90vh;
+    gap: 30px;
+
+
+    &__bg-img{
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 30px;
+    }
+}

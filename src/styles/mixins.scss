@@ -1,0 +1,5 @@
+@mixin btn($primary, $secondary) {
+    color: $secondary;
+    background-color: rgba($primary, 0.6);
+    border: 1px solid $primary;
+}
