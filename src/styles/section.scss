@@ -1,0 +1,18 @@
+.section{
+    width: 100%;
+    padding: 100px 0;
+
+    &--pattern-circle{
+        background-image: url('./assets/img/pattern-circle.png');
+        background-repeat: repeat;
+    }
+    &--pattern-hexagon{
+        background-image: url('./assets/img/pattern-hexagon.png');
+        background-repeat: repeat;
+    }
+    &--background{
+        position: relative;
+        height: 70vh;
+    }
+}
+
