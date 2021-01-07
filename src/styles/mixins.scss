@@ -3,3 +3,14 @@
     background-color: rgba($primary, 0.6);
     border: 1px solid $primary;
 }
+@mixin color-text-mod {
+    &--primary{
+        color: $primary;
+    }
+    &--light{
+        color: $white;
+    }
+    &--dark{
+        color: $dark;
+    }
+}

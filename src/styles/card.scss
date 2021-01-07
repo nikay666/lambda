@@ -20,28 +20,7 @@
         font-size: 36px;
         text-align: center;
 
-        &--primary{
-            color: $primary;
-        }
-        &--light{
-            color: $white;
-        }
-    }
-
-    &__text{
-        font-size: 16px;
-        font-family: $lato-f;
-        line-height: 160%;
-
-        &--dark{
-            color: $dark;
-        }   
-        &--light{
-            color: $white;
-        }
-        &--center{
-            text-align: center;
-        }
+        @include color-text-mod();
     }
 
     &__bottom{
