@@ -5,6 +5,7 @@
 @import './styles/section.scss';
 @import './styles/card.scss';
 @import './styles/catalog.scss';
+@import './styles/form.scss';
 
 *{
     box-sizing: border-box;
@@ -27,13 +28,27 @@
 }
 .columns{
     width: 100%;
-    gap: 5px;
+    gap: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    &--narrow{ 
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 30px;
+
+
+        .columns__col{
+            overflow: hidden;
+        }
+    }
+    &--stretch{
+        align-items: stretch;
+    }
+
     &__col{
-        width: 49%;
+        width: 49%;   
     }
     &--left{
         justify-content: flex-start;
@@ -88,6 +103,7 @@
 
 
 .btn{
+    font-family: $lato-f;
     font-size: 18px;
     text-transform: uppercase;
     padding: 16px 40px;
@@ -107,7 +123,17 @@
         }
     }
     &--primary{
-
+        @include btn($primary, $white);
+        &:hover{
+            background-color: $primary;
+        }
+       
+    }
+    &--small{
+        line-height: 1;
+        font-size: 16px;
+        text-transform:  capitalize;
+        padding: 12px 60px;
     }
 }
 
@@ -116,6 +142,16 @@
     height: 100%;
     object-fit: contain;
     object-position: center;
+
+    &--width{
+        width: 100%;
+        height: auto;
+    }
+    &--height{
+        height: 100%;
+        width: auto;
+    }
+
 }
 
 .img-bg{   
@@ -150,5 +186,9 @@
     @include color-text-mod();
     &--center{
         text-align: center;
+    }
+
+    &:not(:first-of-type){
+        margin-top: 20px;
     }
 }
