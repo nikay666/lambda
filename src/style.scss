@@ -6,6 +6,7 @@
 @import './styles/card.scss';
 @import './styles/catalog.scss';
 @import './styles/form.scss';
+@import './styles/footer.scss';
 
 *{
     box-sizing: border-box;
@@ -75,28 +76,58 @@
     margin-top: 20px;
     margin-bottom: 30px;
 
+    &--small{
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
     &--light{
-        .decoration-1 {
+        .decoration-main-1 {
             fill: none;
-            stroke: #fff;
+            stroke:  $white;
             stroke-miterlimit: 10;
             stroke-width: 4px;
+        }
+    
+        .decoration-main-2 {
+            fill:  $white;
+        }
+        &  .decoration-secondary-1 {
+            fill:  $white;
           }
     
-          .decoration-2 {
-            fill: #fff;
-          }
+        & .decoration-secondary-2 {
+            fill: none;
+            stroke: $white;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            stroke-width: 4px;
+        }
+
+    
+
     }
     &--primary{
-        .decoration-1 {
+        .decoration-main-1 {
             fill: none;
             stroke: $primary;
             stroke-miterlimit: 10;
             stroke-width: 4px;
           }
     
-          .decoration-2 {
+          .decoration-main-2 {
             fill: $primary
+          }
+          &  .decoration-secondary-1{
+            fill: $primary;
+          }
+          & .decoration-secondary-2{
+            fill: none;
+            stroke: $primary;
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            stroke-width: 4px;
           }
     }
 }
@@ -179,6 +210,7 @@
 }
 
 .text{
+    $this: &;
     font-size: 16px;
     font-family: $lato-f;
     line-height: 160%;
@@ -188,7 +220,33 @@
         text-align: center;
     }
 
+
+    &--small{
+        font-size:14px;
+    }
+
     &:not(:first-of-type){
         margin-top: 20px;
+    }
+    &--no-gap{
+        &:not(:first-of-type){
+            margin-top: 0;
+        }
+    }
+    &__bold{
+        font-weight: bold;
+    }
+
+}
+
+.icons-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    &__icon{
+        font-size: 18px;
+        color: $white;
     }
 }

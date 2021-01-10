@@ -1,6 +1,7 @@
 .card{
     $width: 400px;
     $padding: 60px;
+    $this: &;
 
     width: 100%;
     max-width: $width;
@@ -15,6 +16,12 @@
     }
     &--wide{
         max-width: 80%;
+    }
+
+    &--small{
+        #{$this}__title{
+            font-size: 20px;
+        }
     }
 
     &__title{
