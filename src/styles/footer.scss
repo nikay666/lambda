@@ -1,4 +1,8 @@
 .footer{
     background-color: $dark;
     padding: 50px 0;
+
+    &__content{
+        flex-wrap: wrap;
+    }
 }
