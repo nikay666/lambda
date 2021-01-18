@@ -16,6 +16,11 @@
 
     &__buttons{
         display: flex;
+        flex-wrap: wrap;
         gap: 30px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in-out;
     }
 }
