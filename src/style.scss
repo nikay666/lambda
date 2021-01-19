@@ -1,8 +1,8 @@
 @import './styles/variables.scss';
 @import './styles/mixins.scss';
 @import './styles/header.scss';
-@import './styles/mainsection.scss';
 @import './styles/section.scss';
+@import './styles/mainsection.scss';
 @import './styles/card.scss';
 @import './styles/catalog.scss';
 @import './styles/form.scss';
@@ -12,6 +12,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 
 

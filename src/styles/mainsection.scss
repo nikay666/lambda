@@ -26,8 +26,8 @@
     }
 
     @media(max-width: $mobile_media_mini){
-        &__content{
-            padding-top: 20px;
+       & &__content{
+            margin-top: 30%;
         }
     }
 }

@@ -1,10 +1,15 @@
 .header{
     width: 100%;
     background: linear-gradient(0deg, rgba(255,255,255,0) 12%, rgba(37,37,37,1) 100%);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
+    transition: 0.5s ease-in-out;
+
+    &.scroll{
+        background: linear-gradient(0deg, rgba(255,255,255,0) 12%, rgba(37,37,37,1) 100%), rgba($dark, 0.4);
+    }
 
 
     &__content{
@@ -19,6 +24,9 @@
         min-width: 100px;
         padding: 5px;
         cursor: pointer;
+        @media (max-width: $mobile_media_mini) {
+            width: 100px;
+        }
     }
 
     &__nav{
@@ -62,6 +70,12 @@
             align-items: center;
             padding: 60px 40px;
         }
+        @media (max-width: $mobile_media_mini) {
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+            padding: 20px;
+        }
         &__icons{
             display: flex;
             margin-top: auto;
@@ -96,6 +110,9 @@
                         border-bottom: 2px solid $white;
                     }
                 }
+            }
+            @media (max-width: $mobile_media) {
+                padding: 15px 20px;
             }
 
             
@@ -170,6 +187,8 @@
     }
     @media (max-width: $mobile_media) {
         width: 40px;
+        top: 20px;
+        right: 20px;
     }
 }
 .btn-hamburger{
