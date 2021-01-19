@@ -169,8 +169,8 @@
             </div>
             
             <div class="mainsection__buttons">
-              <button class="btn btn--dark">book a table</button>
-              <button class="btn btn--dark">see the menu</button>
+              <a href="#reservations"  class="btn btn--dark">book a table</a>
+              <a href="#menu" class="btn btn--dark">see the menu</a>
             </div>
             
           </div>
@@ -542,12 +542,16 @@
                       <input class="field__input input input--date" name="date" type="date" placeholder="date*" required>
                     </div >
                     <div class="form__field field">
-                      <label class="field__label" for="select">Party number</label>
+                      <label class="field__label" for="select">Number of persons</label>
                       <div class="field__input input input--select">
-                        <select class="input__select" name="select" type="range" placeholder="party number" required>
+                        <select class="input__select" name="select" type="range" placeholder="Number of persons" required>
                           <option  value="null" disabled selected>Select your option</option>
                           <option  value="1">1</option>
                           <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="more">more</option>
                         </select>
                       </div>
                     </div>
@@ -670,5 +674,12 @@
       <!-- End Card  -->
       </div>
     </footer>
+
+    <div class="popup">
+      <p class="popup__title">Thank you<span class='popup__name'></span></p>
+      <p class="popup__text text text--light">You have booked a table
+        <span class="popup__date"></span><span class="popup__select"></span>
+      </p>
+    </div>
 </body>
 </html>
