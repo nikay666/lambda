@@ -1,3 +1,4 @@
+@import './variables.scss';
 .form{
     width: 100%;
     display: flex;
@@ -20,6 +21,13 @@
         display: flex;
         justify-content: center;
     }
+
+    @media (max-width: $tablet_media) {
+        
+        &__field{
+            width: 100%;
+        }
+    }
 }
 
 .field{
@@ -27,7 +35,7 @@
 
     &__label{
         display: block;
-        font-size: 16px;
+        font-size: 1rem;
         color: $primary;
         font-weight: bold;
         margin-bottom: 10px;
@@ -40,7 +48,7 @@
 }
 
 .input{
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 10px 15px;
     border: 1px solid rgba($grey, 0.3);
     color: rgba($dark, 0.6);

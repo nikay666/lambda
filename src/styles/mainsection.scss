@@ -1,3 +1,4 @@
+@import './variables.scss';
 .mainsection{
     display: flex;
     align-items: center;
@@ -22,5 +23,11 @@
         align-items: center;
         justify-content: center;
         transition: 0.3s ease-in-out;
+    }
+
+    @media(max-width: $mobile_media_mini){
+        &__content{
+            padding-top: 20px;
+        }
     }
 }
