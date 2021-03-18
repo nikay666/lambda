@@ -53,10 +53,13 @@ html{
     align-items: center;
     justify-content: center;
 
+    @include flexGap(80px, row);
+
     &--narrow{ 
         justify-content: space-between;
         align-items: stretch;
         gap: 30px;
+        @include flexGap(30px, row);
 
         .columns__col{
             overflow: hidden;
@@ -64,6 +67,7 @@ html{
         @media (max-width: $tablet_media) {
             gap: 10px;
             align-items: center;
+            @include flexGap(10px, row);
         }
         
     }
@@ -94,6 +98,10 @@ html{
         &__col{
             width: 100%;  
             text-align: center; 
+            @supports not ((scroll-behavior: smooth) and (gap: 30px)){
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     }
     &--img{
@@ -101,6 +109,7 @@ html{
         @media (max-width: $tablet_media_mini) {
             order: 2;
             flex-wrap: nowrap;
+            @include flexGap(10px, row);
         }
     }
 
@@ -111,9 +120,9 @@ html{
         opacity: 0;
         position: absolute;
         z-index: -100;
+
     }
 }
-
 
 
 .h1{
@@ -316,6 +325,7 @@ html{
     justify-content: center;
     gap: 10px;
 
+    @include flexGap(10px, row);
     &__icon{
         font-size: 1.125rem;
         color: $white;

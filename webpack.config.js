@@ -63,6 +63,7 @@ module.exports  = {
         hot: isDev,
         open: true,
         port: 3000,
+        host: '192.168.1.65',
         contentBase: './src',
         watchContentBase: true
     },
