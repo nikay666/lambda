@@ -1,13 +1,5 @@
 @import './styles/variables.scss';
 @import './styles/mixins.scss';
-@import './styles/header.scss';
-@import './styles/section.scss';
-@import './styles/mainsection.scss';
-@import './styles/card.scss';
-@import './styles/catalog.scss';
-@import './styles/form.scss';
-@import './styles/footer.scss';
-@import './styles/popup.scss';
 
 *{
     box-sizing: border-box;
@@ -331,3 +323,12 @@ html{
         color: $white;
     }
 }
+
+@import './styles/header.scss';
+@import './styles/section.scss';
+@import './styles/mainsection.scss';
+@import './styles/card.scss';
+@import './styles/catalog.scss';
+@import './styles/form.scss';
+@import './styles/footer.scss';
+@import './styles/popup.scss';

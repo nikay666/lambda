@@ -1,3 +1,4 @@
+@import './mixins.scss';
 .footer{
     background-color: $dark;
     padding: 50px 0;
@@ -6,6 +7,13 @@
        
         @media (max-width: $tablet_media) {
             flex-wrap: wrap;
+           
+            @supports not ((scroll-behavior: smooth) and (gap: 30px)){
+                align-items: center;
+                flex-direction: column;
+                @include flexGap(30px, column);
+                
+            }
         }
     }
 }
